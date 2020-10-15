@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-//UC4 - create and employee payroll service to store employee payroll in the file
+//UC5 - add a method in EmployeePayrollFileOperations class to print employee payroll data  
 
 public class EmployeePayrollService {
 
@@ -59,4 +59,10 @@ public class EmployeePayrollService {
 	}
 
 	// Counts number of employee entries
+
+	public void printData(IOService ioService) {
+		new EmployeePayrollFileIOOperations().printEmployeePayrollData();
+	}
+
+	// prints employee payroll data
 }
