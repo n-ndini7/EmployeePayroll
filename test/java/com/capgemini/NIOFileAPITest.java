@@ -9,6 +9,9 @@ import java.nio.file.Paths;
 import java.util.stream.IntStream;
 import org.junit.Test;
 
+import com.capgemini.FileOperations.FileUtils;
+import com.capgemini.WatchService.Java8WatchService;
+
 public class NIOFileAPITest {
 	private static String HOME = "D:\\Capgemini Training";
 	private static String PLAY_WITH_NIO = "TempPlayGround";
@@ -49,5 +52,11 @@ public class NIOFileAPITest {
 		System.out.println("Files.newDirectory with temp");
 		Files.newDirectoryStream(playPath, path -> path.toFile().isFile() && path.toString().contains("temp"))
 				.forEach(System.out::println);
+	}
+
+	public void givenADirectoryWhenWatchedListsAllTheActivities() throws IOException {
+		Path dir = Paths.get(HOME + "/" + PLAY_WITH_NIO);
+		Files.list(dir).filter(Files::isRegularFile).forEach(System.out::println);
+		new Java8WatchService(dir).processEvents();
 	}
 }
