@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-//UC1 -  create and employee payroll service to read and write employee payroll to a console
+//UC2- demonstrate file operations 
 
 public class EmployeePayrollService {
 
