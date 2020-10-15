@@ -65,4 +65,13 @@ public class EmployeePayrollService {
 	}
 
 	// prints employee payroll data
+
+	public List<EmployeePayrollData> readData(IOService ioService) {
+		if (ioService.equals(IOService.FILE_IO))
+			return new EmployeePayrollFileIOOperations().readEmployeePayrollData();
+		else
+			return null;
+	}
+
+	// reads the employee payroll file
 }
