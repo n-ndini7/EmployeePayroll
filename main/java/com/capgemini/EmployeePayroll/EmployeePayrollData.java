@@ -1,4 +1,4 @@
-package com.capgemini;
+package com.capgemini.EmployeePayroll;
 
 public class EmployeePayrollData {
 	public int id;

@@ -1,4 +1,4 @@
-package com.capgemini;
+package com.capgemini.EmployeePayroll;
 
 import java.util.List;
 import java.util.Scanner;
